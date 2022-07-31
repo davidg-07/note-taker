@@ -9,6 +9,8 @@ function readFromDb() {
 function writeToDb(note) {
     const data = fs.readFileSync('db/db.json', 'utf8')
     const notes = JSON.parse(data)
-    notes.push(note) 
+    notes.push(note)
 
 }
+
+module.exports = {writeToDb, readFromDb}
