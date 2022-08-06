@@ -23,7 +23,7 @@ app.post('/api/notes', (req, res) => {
 });
 
 // Delete notes once done with them
-app.delete('/api/notes', (req, res) => {
+app.delete('/api/notes/id:', (req, res) => {
   let jsonFilePath = path.join(__dirname, "/db/db.json");
   for (let i = 0; i < data.length; i++) {
     if (database[i].id == req.params.id) {
