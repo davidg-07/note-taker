@@ -25,7 +25,7 @@ app.post('/api/notes', (req, res) => {
 // Delete notes once done with them
 app.delete('/api/notes', (req, res) => {
   let jsonFilePath = path.join(__dirname, "/db/db.json");
-  for (let i = 0; < data.length; i++) {
+  for (let i = 0; i < data.length; i++) {
     if (database[i].id == req.params.id) {
       database.splice(i, 1);
       break;
