@@ -23,24 +23,24 @@ app.post('/api/notes', (req, res) => {
 });
 
 // Delete notes once done with them
-app.delete('/api/notes/id:', (req, res) => {
-  let jsonFilePath = path.join(__dirname, "/db/db.json");
-  for (let i = 0; i < data.length; i++) {
-    if (database[i].id == req.params.id) {
-      database.splice(i, 1);
-      break;
-    }
-  }
-  // Write the bd.json file again
-  fs.writeFileSync(jsonFilePath, JSON.stringify(data), function (err) {
-    if(err) {
-      return console.log("your note was deleted!");
-    } else {
-      console.log("Your note was deleted!");
-    }
-  });
-  res.json(database);
-});
+// app.delete('/api/notes/id:', (req, res) => {
+//   let jsonFilePath = path.join(__dirname, "/db/db.json");
+//   for (let i = 0; i < data.length; i++) {
+//     if (database[i].id == req.params.id) {
+//       database.splice(i, 1);
+//       break;
+//     }
+//   }
+//   // Write the bd.json file again
+//   fs.writeFileSync(jsonFilePath, JSON.stringify(data), function (err) {
+//     if(err) {
+//       return console.log("your note was deleted!");
+//     } else {
+//       console.log("Your note was deleted!");
+//     }
+//   });
+//   res.json(database);
+// });
 
 app.get('/notes', (req, res) => {
   res.sendFile(path.join(__dirname, '/public/notes.html'));
