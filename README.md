@@ -35,8 +35,8 @@ Check out the deployed app here: [Note Taker](https://note-taker-dmg.herokuapp.c
 
 ### Screenshots
 
-![screenshot](./Develop/public/assets/img/screencapture-localhost-3000-2022-08-06-19_56_00.pdf)
-![screenshot](./Develop/public/assets/img/screencapture-localhost-3000-notes-2022-08-06-19_57_18.pdf)
+![screenshot](./public/assets/img/screencapture-localhost-3000-2022-08-06-19_56_00.pdf)
+![screenshot](./public/assets/img/screencapture-localhost-3000-notes-2022-08-06-19_57_18.pdf)
 
 ### Contact
 
