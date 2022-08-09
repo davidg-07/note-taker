@@ -4,7 +4,7 @@ const fs = require('fs');
 const dbService = require('./db/dbService');
 
 const app = express();
-const port = 3000;
+const PORT = process.env.PORT || 3001;
 
 
 app.use(express.json());
@@ -50,6 +50,6 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../public/index.html'));
 });
 
-app.listen(port, () => {
-  console.log("listening on port 3000");
+app.listen(PORT, () => {
+  console.log("listening on port 3001");
 });
