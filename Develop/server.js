@@ -1,19 +1,19 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
-const dbService = require('./db/dbService')
+const dbService = require('./db/dbService');
 
 const app = express();
 const port = 3000;
 
 
-app.use(express.json())
-app.use(express.urlencoded({extended: true}))
+app.use(express.json());
+app.use(express.urlencoded({extended: true}));
 app.use(express.static('public'));
 
 
 app.get('/api/notes', (req, res) => {
-  const data = fs.readFileSync('db/db.json', 'utf8')
+  const data = fs.readFileSync('db/db.json', 'utf8');
   res.send(data);
 })
 
@@ -51,5 +51,5 @@ app.get('*', (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log("listening on port 3000")
+  console.log("listening on port 3000");
 });
